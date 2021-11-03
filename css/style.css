@@ -32,33 +32,48 @@ a {
     width: 100%;
 }
 
+ul {
+    list-style-type: none;
+}
+
+li {
+    font-size: 0.7em;
+}
+
 body .container {
     width: 100%;
     height: 100vh;
-    overflow: hidden;
+    max-
 }
 
-.mt1em {
+.mt-1em {
     margin-top: 1em;
 }
 
-.clearfix::after {
+/* .clearfix::after {
     content: '';
     display: table;
     clear: both;
-}
+} */
 
 .fixed {
     position: fixed;
 }
 
+.flex {
+    display: flex;
+}
+
 main {
     height: calc(100% - 70px);
     background-color: var(--main-background);
+    overflow: auto;
+    align-items: stretch;
 }
 
 main .col-left {
-    float: left;
+    flex-direction: column;
+    justify-content: space-between;
     width: 200px;
     height: 100%;
     background-color: var(--black);
@@ -66,43 +81,118 @@ main .col-left {
 }
 
 main .col-left .spotify-logo img {
-    width: 75%;
-    padding: 1em;
+    width: 80%;
+    padding: 1em 1.5em;
 }
 
-main .col-left .left-navbar ul {
-    list-style-type: none;
+main .col-left .left-navbar a {
+    padding: 0.8em 1.5em;
 }
 
-main .col-left .left-navbar li {
-    font-size: 0.8em;
+main .col-left a.flex {
+    align-items: center;
+}
+
+main .col-left a:hover {
+    color: white;
+}
+
+main .col-left .left-navbar svg {
+    width: 15%;
+    margin-right: 0.5em;
+    fill: var(--grey-text);
 }
 
 main .col-left .left-navbar li.bordered {
     border-left: 2px solid var(--green);
 }
 
-main .col-left .left-navbar a {
-    padding: 1em 1.5em;
-    display: flex;
-    align-items: center;
+main .col-left .left-navbar li.bordered svg {
+    fill: white;
 }
 
-main .col-left .left-navbar a:hover {
+main .col-left h3 {
     color: white;
+    font-size: 0.8em;
 }
 
-main .col-left .left-navbar img {
-    width: 15%;
+main .col-left .playlist h3 {
+    text-transform: uppercase;
+}
+
+main .col-left .playlist {
+    padding: 1em 1.5em;
+}
+
+main .col-left .playlist .create-playlist {
+    font-size: 0.8em;
+    margin: 0.5em 0;
+}
+
+main .col-left .playlist .plus-container {
+    height: 35px;
+    width: 35px;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--grey-text);
     margin-right: 0.5em;
 }
 
+main .col-left .playlist .plus-container i {
+    color: var(--black);
+    font-size: 1.2em;
+}
+
+main .col-left .playlist li>a {
+    padding: 0.8em 0;
+}
+
+main .col-left a:hover div.plus-container {
+    background-color: white;
+}
+
+main .col-left .footer-col-left {
+    flex-direction: column;
+    padding: 0.5em 1.5em;
+}
+
+main .col-left .footer-col-left svg {
+    width: 10%;
+    margin-right: 0.5em;
+    fill: var(--grey-text);
+}
+
+main .col-left .footer-col-left .user,
+main .col-left .footer-col-left .install-app {
+    align-items: center;
+}
+
+main .col-left .footer-col-left .install-app {
+    padding-bottom: 0.5em;
+    border-bottom: 1px solid var(--grey-text);
+}
+
+main .col-left .footer-col-left .user {
+    padding-top: 0.5em;
+}
+
+main .col-left .footer-col-left .user-image {
+    height: 25px;
+    width: 25px;
+    margin-right: 0.5em;
+    border-radius: 100%;
+    background-color: var(--grey-text);
+    background-image: url(../img/profile.svg);
+}
+
+main .col-left .footer-col-left .install-app span {
+    font-size: 0.7em;
+}
+
 main .col-right {
-    float: left;
     height: 100%;
     width: calc(100% - 200px);
     position: relative;
-    overflow: auto;
 }
 
 main .col-right .right-container {
