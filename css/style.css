@@ -3,6 +3,8 @@
     --main-background: #141922;
     --upgrade-background: rgba(8, 11, 18, 0.5);
     --footer-background: #282828;
+    --grey-text: #A3A3A3;
+    --green: #ADFC30;
 }
 
 * {
@@ -22,10 +24,22 @@ body {
     min-width: 450px;
 }
 
+a {
+    text-decoration: none;
+    color: var(--grey-text);
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+}
+
 body .container {
     width: 100%;
     height: 100vh;
     overflow: hidden;
+}
+
+.mt1em {
+    margin-top: 1em;
 }
 
 .clearfix::after {
@@ -48,6 +62,39 @@ main .col-left {
     width: 200px;
     height: 100%;
     background-color: var(--black);
+    color: var(--grey-text);
+}
+
+main .col-left .spotify-logo img {
+    width: 75%;
+    padding: 1em;
+}
+
+main .col-left .left-navbar ul {
+    list-style-type: none;
+}
+
+main .col-left .left-navbar li {
+    font-size: 0.8em;
+    display: flex;
+    align-items: center;
+}
+
+main .col-left .left-navbar li.bordered {
+    border-left: 2px solid var(--green);
+}
+
+main .col-left .left-navbar a {
+    padding: 1em 1.5em;
+}
+
+main .col-left .left-navbar a:hover {
+    color: white;
+}
+
+main .col-left .left-navbar i {
+    font-size: 1.8em;
+    margin-right: 0.5em;
 }
 
 main .col-right {
