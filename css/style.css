@@ -50,11 +50,11 @@ body .container {
     margin-top: 1em;
 }
 
-/* .clearfix::after {
+.clearfix::after {
     content: '';
     display: table;
     clear: both;
-} */
+}
 
 .fixed {
     position: fixed;
@@ -67,8 +67,7 @@ body .container {
 main {
     height: calc(100% - 70px);
     background-color: var(--main-background);
-    overflow: auto;
-    align-items: stretch;
+    /* align-items: stretch; */
 }
 
 main .col-left {
@@ -193,6 +192,8 @@ main .col-right {
     height: 100%;
     width: calc(100% - 200px);
     position: relative;
+    color: white;
+    overflow: auto;
 }
 
 main .col-right .right-container {
@@ -201,10 +202,22 @@ main .col-right .right-container {
 
 .col-right .upgrade {
     top: 0;
-    left: 200px;
     height: 70px;
-    width: 100%;
+    width: calc(100% - 200px);
     background-color: var(--upgrade-background);
+    justify-content: flex-end;
+}
+
+.col-right .upgrade button {
+    margin: 1.5em 1em;
+    border-radius: 20px;
+    padding: 0 3em;
+    text-transform: uppercase;
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    cursor: pointer;
+    font-size: 0.7em;
 }
 
 footer {
