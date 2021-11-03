@@ -76,8 +76,6 @@ main .col-left .left-navbar ul {
 
 main .col-left .left-navbar li {
     font-size: 0.8em;
-    display: flex;
-    align-items: center;
 }
 
 main .col-left .left-navbar li.bordered {
@@ -86,14 +84,16 @@ main .col-left .left-navbar li.bordered {
 
 main .col-left .left-navbar a {
     padding: 1em 1.5em;
+    display: flex;
+    align-items: center;
 }
 
 main .col-left .left-navbar a:hover {
     color: white;
 }
 
-main .col-left .left-navbar i {
-    font-size: 1.8em;
+main .col-left .left-navbar img {
+    width: 15%;
     margin-right: 0.5em;
 }
 
