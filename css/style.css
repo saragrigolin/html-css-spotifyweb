@@ -14,6 +14,7 @@
     /* height */
     --footer-height: 70px;
     --upgrade-height: 70px;
+    --name-playlist-height: 30vh;
 }
 
 * {
@@ -45,8 +46,9 @@ ul {
     list-style-type: none;
 }
 
-li {
+span {
     font-size: 0.7em;
+    color: var(--grey-text);
 }
 
 body .container {
@@ -95,7 +97,7 @@ main .col-right {
     width: calc(100% - var(--left-col-width-md));
     position: relative;
     color: white;
-    overflow: auto;
+    overflow: scroll;
 }
 
 @media screen and (max-width: 600px) {
@@ -118,7 +120,7 @@ main .col-left .spotify-logo img {
 }
 
 main .col-left .left-navbar a {
-    padding: 0.8em 1.5em;
+    padding: 0.3em 1.5em;
 }
 
 main .col-left a.flex {
@@ -143,7 +145,7 @@ main .col-left .left-navbar li.bordered svg {
     fill: white;
 }
 
-main .col-left h3 {
+main h3 {
     color: white;
     font-size: 0.8em;
 }
@@ -176,12 +178,12 @@ main .col-left .playlist .plus-container i {
 }
 
 main .col-left .playlist .name-playlist {
-    height: 32vh;
-    overflow: auto;
+    height: var(--name-playlist-height);
+    overflow: scroll;
 }
 
 main .col-left .playlist .name-playlist li>a {
-    padding: 0.8em 0;
+    padding: 0.4em 0;
 }
 
 main .col-left a:hover div.plus-container {
@@ -271,6 +273,64 @@ main .col-right .right-container {
     width: 20px;
     background-color: var(--green);
     margin: 0.3em 0;
+}
+
+.col-right .right-container h2 {
+    margin: 1em 0;
+}
+
+/* .col-right .right-container h3 {
+    font-size: 0.8em;
+} */
+
+.col-right .right-container .album-container {
+    justify-content: space-between;
+}
+
+.col-right .right-container .album-container .album {
+    text-align: center;
+    min-width: 150px;
+    max-width: 250px;
+    padding-right: 1em;
+}
+
+.col-right .right-container .album-container .album:last-child {
+}
+
+.col-right .right-container .cover {
+    position: relative;
+}
+
+.col-right .right-container .cover img {
+    width: 100%;
+}
+
+.col-right .right-container .cover .grey-overlay {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(8, 11, 18, 0.5);
+}
+
+.col-right .right-container .cover:hover .grey-overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.col-right .right-container .cover .grey-overlay i {
+    font-size: 4em;
+}
+
+.col-right .right-container .title {
+    margin-top: 1em;
+}
+
+.col-right .right-container .created-for-you .album-container{
+    width: calc((100% / 3) - 1em);
 }
 
 footer {
