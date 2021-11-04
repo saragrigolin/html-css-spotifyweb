@@ -79,7 +79,7 @@ body .container {
 }
 
 main svg {
-    width: 15%;
+    width: 1.5em;
     margin-right: 0.5em;
     fill: var(--grey-text);
 }
@@ -119,24 +119,16 @@ main .col-right {
     overflow: scroll;
 }
 
-@media screen and (max-width: 600px) {
-    main .col-left {
-        width: var(--left-col-width-xs);
-    }
-
-    main .col-right {
-        width: calc(100% - var(--left-col-width-xs));
-    }
-
-    main .col-right .upgrade {
-        width: calc(100% - var(--left-col-width-xs));
-    }
-}
-
 /* Colonna sinistra - parte superiore */
 main .col-left .spotify-logo img {
-    width: 80%;
+    height: 70px;
     padding: 1em 1.5em;
+}
+
+main .col-left .spotify-logo .logo-small {
+    display: none;
+    height: 30px;
+    padding: 0;
 }
 
 main .col-left .left-navbar a {
@@ -207,7 +199,7 @@ main .col-left .footer-col-left {
 }
 
 main .col-left .footer-col-left svg {
-    width: 10%;
+    width: 1em;
     margin-right: 0.5em;
 }
 
@@ -543,4 +535,86 @@ footer .footer-col-right .volume-bar:hover .volume-done {
 
 footer .footer-col-right .volume-bar:hover .progress-dot {
     display: inline-block;
+}
+
+/* Media query */
+@media screen and (max-width: 600px) {
+    main .col-left {
+        width: var(--left-col-width-xs);
+    }
+
+    main .col-right {
+        width: calc(100% - var(--left-col-width-xs));
+    }
+
+    main .col-right .upgrade {
+        width: calc(100% - var(--left-col-width-xs));
+    }
+
+    main .col-left .spotify-logo {
+        display: flex;
+        justify-content: center;
+        margin: 0.5em 0;
+    }
+
+    main .col-left .spotify-logo .logo-big {
+    display: none;
+    }
+
+    main .col-left .spotify-logo .logo-small {
+    display: inline-block;
+    }
+
+    main .col-left .left-navbar {
+        display: flex;
+        justify-content: center;
+    }
+
+    main .col-left .left-navbar a {
+        padding: 0.3em 0;
+    }
+
+    main .col-left .left-navbar li.bordered {
+        border-left: none;
+    }
+
+    main svg {
+        width: 1.5em;
+        margin-right: 0;
+        fill: var(--grey-text);
+    }
+
+    main .col-left .footer-col-left {
+        padding: 0;
+        align-items: center;
+    }
+
+    main .col-left .footer-col-left svg {
+        width: 1em;
+        margin-right: 0;
+    }
+
+    main .col-left .footer-col-left .install-app {
+        border-bottom: none;
+    }
+
+    main .col-left a.flex {
+        justify-content: center;
+    }
+
+    main .col-left .footer-col-left .user-image {
+        margin-right: 0;
+    }
+
+    main .col-left a>span {
+        display: none;
+    }
+
+    main .col-left h3 {
+        display: none;
+    }
+
+    main .col-left .upper-col-left .playlist {
+        display: none;
+    }
 }
