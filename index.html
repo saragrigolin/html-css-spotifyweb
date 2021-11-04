@@ -13,7 +13,8 @@
         integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/style.css">
-    <title>Document</title>
+    <link rel="icon" type="image/png" href="img/favicon.ico">
+    <title>Spotify</title>
 </head>
 <body>
     <div class="container">
@@ -77,13 +78,15 @@
                     </div>
                 </div>
                 <div class="footer-col-left flex">
-                    <div class="install-app flex">
-                        <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <div class="install-app">
+                        <a href="#" class="flex">
+                            <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                             <title>Download icon</title>
                             <path
-                                d="M12 11.657V6h-1v5.65L9.076 9.414l-.758.65 3.183 3.702 3.195-3.7-.758-.653L12 11.657zM11.5 2C7.358 2 4 5.358 4 9.5c0 4.142 3.358 7.5 7.5 7.5 4.142 0 7.5-3.358 7.5-7.5C19 5.358 15.642 2 11.5 2zm0 14C7.916 16 5 13.084 5 9.5S7.916 3 11.5 3 18 5.916 18 9.5 15.084 16 11.5 16z" fill-rule="evenodd" />
-                        </svg>
-                        <span>Installa app</span>
+                                d="M12 11.657V6h-1v5.65L9.076 9.414l-.758.65 3.183 3.702 3.195-3.7-.758-.653L12 11.657zM11.5 2C7.358 2 4 5.358 4 9.5c0 4.142 3.358 7.5 7.5 7.5 4.142 0 7.5-3.358 7.5-7.5C19 5.358 15.642 2 11.5 2zm0 14C7.916 16 5 13.084 5 9.5S7.916 3 11.5 3 18 5.916 18 9.5 15.084 16 11.5 16z" />
+                            </svg>
+                            <span>Installa app</span>
+                        </a>
                     </div>
                     <div class="user flex">
                         <div class="user-image">
@@ -112,15 +115,17 @@
                             <li><a href="#"><span>scopri</span></a></li>
                         </ul>
                     </div>
-                    <div class="recently-played">
-                        <h2>Recently played</h2>
+                    <div class="section recently-played">
+                        <div class="section-title">
+                            <h2>Recently played</h2>
+                        </div>
                         <ul class="album-container flex">
                             <li class="album">
                                 <div class="cover">
+                                    <img src="img/metal_lifting.jpg" alt="">
                                     <div class="grey-overlay">
                                         <i class="far fa-play-circle"></i>
                                     </div>
-                                    <img src="img/metal_lifting.jpg" alt="">
                                 </div>
                                 <div class="title">
                                     <h3>Heavy Metal</h3>
@@ -189,9 +194,11 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="created-for-you">
-                        <h2>Creato per John Doe</h2>
-                        <span>Pi&ugrave; ascolti, pi&ugrave; accurati saranno i suggerimenti.</span>
+                    <div class="section created-for-you">
+                        <div class="section-title">
+                            <h2>Creato per John Doe</h2>
+                            <span>Pi&ugrave; ascolti, pi&ugrave; accurati saranno i suggerimenti.</span>
+                        </div>
                         <ul class="album-container flex">
                             <li class="album">
                                 <div class="cover">
@@ -217,7 +224,35 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="most-popular">
+                    <div class="section most-popular">
+                        <div class="section-title">
+                            <h2>Artisti pi&ugrave; popolari</h2>
+                            <span>Pi&ugrave; ascolti, pi&ugrave; accurati saranno i suggerimenti.</span>
+                        </div>
+                        <ul class="album-container flex">
+                            <li class="album">
+                                <div class="cover">
+                                    <div class="grey-overlay">
+                                        <i class="far fa-play-circle"></i>
+                                    </div>
+                                    <img src="img/youg.jpeg" alt="">
+                                </div>
+                                <div class="title">
+                                    <h3>Lana del Rey</h3>
+                                </div>
+                            </li>
+                            <li class="album">
+                                <div class="cover">
+                                    <div class="grey-overlay">
+                                        <i class="far fa-play-circle"></i>
+                                    </div>
+                                    <img src="img/einaudi.jpeg" alt="">
+                                </div>
+                                <div class="title">
+                                    <h3>Ludovico Einaudi</h3>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>

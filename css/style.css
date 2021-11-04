@@ -1,6 +1,7 @@
 :root {
     /* Colors */
     --black: #000000;
+    --white: #ffffff;
     --main-background: #141922;
     --upgrade-background: rgba(8, 11, 18, 0.5);
     --footer-background: #282828;
@@ -96,7 +97,7 @@ main .col-right {
     height: 100%;
     width: calc(100% - var(--left-col-width-md));
     position: relative;
-    color: white;
+    color: var(--white);
     overflow: scroll;
 }
 
@@ -127,14 +128,18 @@ main .col-left a.flex {
     align-items: center;
 }
 
-main a:hover {
-    color: white;
-}
-
-main .col-left .left-navbar svg {
+main svg {
     width: 15%;
     margin-right: 0.5em;
     fill: var(--grey-text);
+}
+
+main a:hover svg {
+    fill: var(--white);
+}
+
+main a:hover span {
+    color: var(--white);
 }
 
 main .col-left .left-navbar li.bordered {
@@ -142,11 +147,11 @@ main .col-left .left-navbar li.bordered {
 }
 
 main .col-left .left-navbar li.bordered svg {
-    fill: white;
+    fill: var(--white);
 }
 
 main h3 {
-    color: white;
+    color: var(--white);
     font-size: 0.8em;
 }
 
@@ -187,7 +192,7 @@ main .col-left .playlist .name-playlist li>a {
 }
 
 main .col-left a:hover div.plus-container {
-    background-color: white;
+    background-color: var(--white);
 }
 
 main .col-left .footer-col-left {
@@ -198,11 +203,10 @@ main .col-left .footer-col-left {
 main .col-left .footer-col-left svg {
     width: 10%;
     margin-right: 0.5em;
-    fill: var(--grey-text);
 }
 
 main .col-left .footer-col-left .user,
-main .col-left .footer-col-left .install-app {
+main .col-left .footer-col-left .a {
     align-items: center;
 }
 
@@ -247,8 +251,8 @@ main .col-right .right-container {
     padding: 0 3em;
     text-transform: uppercase;
     background-color: transparent;
-    color: white;
-    border: 1px solid white;
+    color: var(--white);
+    border: 1px solid var(--white);
     cursor: pointer;
     font-size: 0.7em;
 }
@@ -275,13 +279,13 @@ main .col-right .right-container {
     margin: 0.3em 0;
 }
 
-.col-right .right-container h2 {
-    margin: 1em 0;
+.col-right .right-container .section {
+    padding: 2em 0;
 }
 
-/* .col-right .right-container h3 {
-    font-size: 0.8em;
-} */
+.col-right .right-container .section-title {
+    margin-bottom: 1em;
+}
 
 .col-right .right-container .album-container {
     justify-content: space-between;
@@ -289,7 +293,7 @@ main .col-right .right-container {
 
 .col-right .right-container .album-container .album {
     text-align: center;
-    min-width: 150px;
+    min-width: 100px;
     max-width: 250px;
     padding-right: 1em;
 }
@@ -310,8 +314,9 @@ main .col-right .right-container {
     position: absolute;
     top: 0;
     right: 0;
-    height: 100%;
+    height: calc(100% - 4px);
     width: 100%;
+    padding-bottom: 4px;
     background-color: rgba(8, 11, 18, 0.5);
 }
 
@@ -329,8 +334,18 @@ main .col-right .right-container {
     margin-top: 1em;
 }
 
-.col-right .right-container .created-for-you .album-container{
+.col-right .right-container .created-for-you .album-container,
+.col-right .right-container .most-popular .album-container {
     width: calc((100% / 3) - 1em);
+}
+
+.col-right .right-container .most-popular .cover img {
+    border-radius: 100%;
+}
+
+.col-right .right-container .most-popular .cover:hover 
+.grey-overlay {
+    border-radius: 100%;
 }
 
 footer {
