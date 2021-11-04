@@ -89,6 +89,15 @@ main .col-left {
     overflow: hidden;
 }
 
+main .col-right {
+    float: left;
+    height: 100%;
+    width: calc(100% - var(--left-col-width-md));
+    position: relative;
+    color: white;
+    overflow: auto;
+}
+
 @media screen and (max-width: 600px) {
     main .col-left {
         width: var(--left-col-width-xs);
@@ -116,7 +125,7 @@ main .col-left a.flex {
     align-items: center;
 }
 
-main .col-left a:hover {
+main a:hover {
     color: white;
 }
 
@@ -217,15 +226,6 @@ main .col-left .footer-col-left .install-app span {
     font-size: 0.7em;
 }
 
-main .col-right {
-    float: left;
-    height: 100%;
-    width: calc(100% - var(--left-col-width-md));
-    position: relative;
-    color: white;
-    overflow: auto;
-}
-
 main .col-right .right-container {
     margin: 90px 20px 20px 20px;
 }
@@ -249,6 +249,28 @@ main .col-right .right-container {
     border: 1px solid white;
     cursor: pointer;
     font-size: 0.7em;
+}
+
+.col-right .right-container .right-navbar {
+    text-align: center;
+}
+
+.col-right .right-container .navbar-ul li {
+    display: inline-block;
+    text-transform: uppercase;
+    margin: 0 1em;
+}
+
+.col-right .right-container .navbar-ul .flex {
+    flex-direction: column;
+    align-items: center;
+}
+
+.col-right .right-container .navbar-ul .green-border {
+    height: 1px;
+    width: 20px;
+    background-color: var(--green);
+    margin: 0.3em 0;
 }
 
 footer {
