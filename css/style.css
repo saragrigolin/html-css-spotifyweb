@@ -367,6 +367,8 @@ footer .footer-col-right {
 
 footer .footer-col-center {
     width: calc(100% - (var(--left-col-width-md)*2));
+    flex-direction: column;
+    padding: 0.8em 0;
 }
 
 footer .footer-col-left {
@@ -404,4 +406,43 @@ footer .footer-col-left i {
     color: var(--grey-text);
     padding: 0 0.3em;
     font-size: 0.8em;
+}
+
+footer .footer-col-center .media-player,
+footer .footer-col-center .progress-bar {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+footer .footer-col-center .media-player {
+    height: 60%;
+}
+
+footer .footer-col-center .progress-bar {
+    height: 40%;
+    margin-top: 0.5em;
+}
+
+footer .footer-col-center i {
+    color: var(--white);
+    margin: 0 0.5em;
+}
+
+footer .footer-col-center i.fa-play-circle {
+    font-size: 1.8em;
+}
+
+footer .footer-col-center .progress-done {
+    height: 3px;
+    width: 8%;
+    background-color: var(--white);
+    margin-left: 0.5em;
+}
+
+footer .footer-col-center .progress-left {
+    height: 3px;
+    width: 40%;
+    background-color: var(--grey-text);
+    margin-right: 0.5em;
 }
