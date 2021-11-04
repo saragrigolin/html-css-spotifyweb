@@ -304,6 +304,10 @@ main .col-right .right-container {
     padding-right: 1em;
 }
 
+.col-right .right-container .recently-played .album-container .album {
+    width: calc(100% / 6);
+}
+
 .col-right .right-container .cover {
     position: relative;
 }
