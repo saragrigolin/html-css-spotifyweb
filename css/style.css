@@ -352,3 +352,56 @@ footer {
     height: var(--footer-height);
     background-color: var(--footer-background);
 }
+
+footer .footer-col-left,
+footer .footer-col-center,
+footer .footer-col-right {
+    height: 100%;
+    float: left;
+}
+
+footer .footer-col-left,
+footer .footer-col-right {
+    width: var(--left-col-width-md);
+}
+
+footer .footer-col-center {
+    width: calc(100% - (var(--left-col-width-md)*2));
+}
+
+footer .footer-col-left {
+    padding: 1em 0;
+    align-items: center;
+    justify-content: space-around;
+}
+
+footer .footer-col-left .footer-left-content,
+footer .footer-col-left .footer-right-content {
+    height: 100%;
+    align-items: center;
+}
+
+footer .footer-col-left img {
+    height: 100%;
+    padding-right: 0.5em;
+}
+
+footer .footer-col-left .song-title {
+    flex-direction: column;
+}
+
+footer .footer-col-left span.author {
+    color: var(--white);
+    font-size: 0.7em;
+    font-weight: bold;
+}
+
+footer .footer-col-left span.song-name {
+    font-size: 0.6em;
+}
+
+footer .footer-col-left i {
+    color: var(--grey-text);
+    padding: 0 0.3em;
+    font-size: 0.8em;
+}
