@@ -20,6 +20,7 @@
     --name-playlist-height: 30vh;
 }
 
+/* General */
 * {
     margin: 0;
     padding: 0;
@@ -77,6 +78,21 @@ body .container {
     display: flex;
 }
 
+main svg {
+    width: 15%;
+    margin-right: 0.5em;
+    fill: var(--grey-text);
+}
+
+main a:hover svg {
+    fill: var(--white);
+}
+
+main a:hover span {
+    color: var(--white);
+}
+
+/* Main */
 main {
     height: calc(100% - var(--footer-height));
     background-color: var(--main-background);
@@ -117,6 +133,7 @@ main .col-right {
     }
 }
 
+/* Colonna sinistra - parte superiore */
 main .col-left .spotify-logo img {
     width: 80%;
     padding: 1em 1.5em;
@@ -128,20 +145,6 @@ main .col-left .left-navbar a {
 
 main .col-left a.flex {
     align-items: center;
-}
-
-main svg {
-    width: 15%;
-    margin-right: 0.5em;
-    fill: var(--grey-text);
-}
-
-main a:hover svg {
-    fill: var(--white);
-}
-
-main a:hover span {
-    color: var(--white);
 }
 
 main .col-left .left-navbar li.bordered {
@@ -197,6 +200,7 @@ main .col-left a:hover div.plus-container {
     background-color: var(--white);
 }
 
+/* Colonna sinistra - parte inferiore */
 main .col-left .footer-col-left {
     flex-direction: column;
     padding: 0.5em 1.5em;
@@ -234,10 +238,12 @@ main .col-left .footer-col-left .install-app span {
     font-size: 0.7em;
 }
 
+/* Colonna destra */
 main .col-right .right-container {
     margin: 90px 20px 20px 20px;
 }
 
+/* Barra fixed "effettua upgrade" */
 .col-right .upgrade {
     top: 0;
     right: 0;
@@ -248,7 +254,7 @@ main .col-right .right-container {
 }
 
 .col-right .upgrade button {
-    margin: 1.5em 1em;
+    margin: 1.5em 3em;
     border-radius: 20px;
     padding: 0 3em;
     text-transform: uppercase;
@@ -259,6 +265,11 @@ main .col-right .right-container {
     font-size: 0.7em;
 }
 
+.col-right .upgrade button:hover {
+    transform: scale(1.2);
+}
+
+/* Navbar */
 .col-right .right-container .right-navbar {
     text-align: center;
 }
@@ -281,6 +292,7 @@ main .col-right .right-container {
     margin: 0.3em 0;
 }
 
+/* Sezioni */
 .col-right .right-container .section {
     padding: 2em 0;
 }
@@ -298,9 +310,6 @@ main .col-right .right-container {
     min-width: 100px;
     max-width: 250px;
     padding-right: 1em;
-}
-
-.col-right .right-container .album-container .album:last-child {
 }
 
 .col-right .right-container .cover {
@@ -336,6 +345,7 @@ main .col-right .right-container {
     margin-top: 1em;
 }
 
+/* Sezioni "creato per john doe" e "artisti più popolari" */
 .col-right .right-container .created-for-you .album-container,
 .col-right .right-container .most-popular .album-container {
     width: calc((100% / 3) - 1em);
@@ -350,9 +360,14 @@ main .col-right .right-container {
     border-radius: 100%;
 }
 
+/* Footer */
 footer {
     height: var(--footer-height);
     background-color: var(--footer-background);
+}
+
+footer i {
+    cursor: pointer;
 }
 
 footer .footer-col-left,
@@ -384,6 +399,15 @@ footer .footer-col-right {
     justify-content: center;
 }
 
+footer .progress-dot {
+    display: none;
+    width: 12px;
+    height: 12px;
+    border-radius: 100%;
+    background-color: var(--white);
+}
+
+/* Footer - colonna sinistra */
 footer .footer-col-left .footer-left-content,
 footer .footer-col-left .footer-right-content {
     height: 100%;
@@ -403,6 +427,10 @@ footer .footer-col-left .song-title {
     flex-direction: column;
 }
 
+footer .footer-col-left a {
+    line-height: 0.7em;
+}
+
 footer .footer-col-left span.author {
     color: var(--white);
     font-size: 0.7em;
@@ -413,12 +441,22 @@ footer .footer-col-left span.song-name {
     font-size: 0.6em;
 }
 
+footer .footer-col-left span.song-name:hover {
+    text-decoration: underline;
+    color: white;
+}
+
 footer .footer-col-left i {
     color: var(--grey-text);
     margin: 0 0.5em;
     font-size: 0.8em;
 }
 
+footer .footer-col-left i:hover {
+    color: var(--white);
+}
+
+/* Footer - colonna centrale */
 footer .footer-col-center .media-player,
 footer .footer-col-center .progress-bar {
     justify-content: center;
@@ -444,6 +482,10 @@ footer .footer-col-center i.fa-play-circle {
     font-size: 1.8em;
 }
 
+footer .footer-col-center i.fa-play-circle:hover {
+    transform: scale(1.1);
+}
+
 footer .footer-col-center .progress-done {
     height: 3px;
     width: 8%;
@@ -460,14 +502,6 @@ footer .footer-col-center .progress-left {
     margin-right: 0.5em;
 }
 
-footer .progress-dot {
-    display: none;
-    width: 12px;
-    height: 12px;
-    border-radius: 100%;
-    background-color: var(--white);
-}
-
 footer .footer-col-center .progress-bar:hover .progress-done {
     background-color: var(--green);
 }
@@ -476,6 +510,7 @@ footer .footer-col-center .progress-bar:hover .progress-dot {
     display: inline-block;
 }
 
+/* Footer - colonna destra */
 footer .footer-col-right i {
     color: var(--white);
     margin: 0 0.5em;
