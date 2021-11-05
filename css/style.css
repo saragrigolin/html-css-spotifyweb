@@ -273,8 +273,8 @@ main .col-right .right-container {
     display: inline-block;
     text-transform: uppercase;
     margin: 0 1em;
+    padding-bottom: 1em;
     font-weight: 500;
-    font-size: 1.1em;
 }
 
 .col-right .right-container .navbar-ul .flex {
@@ -550,7 +550,7 @@ footer .footer-col-right .volume-bar:hover .progress-dot {
     display: inline-block;
 }
 
-
+/* Media query md */
 @media screen and (max-width: 1100px) {
     .col-right .right-container .recently-played .album-container {
         flex-wrap: wrap;
@@ -559,7 +559,7 @@ footer .footer-col-right .volume-bar:hover .progress-dot {
 
     .col-right .right-container .album-container .album {
         text-align: center;
-        min-width: 140px;
+        min-width: 100px;
         max-width: 250px;
         padding-right: 1em;
     }
@@ -574,7 +574,21 @@ footer .footer-col-right .volume-bar:hover .progress-dot {
     }
 }
 
-/* Media query */
+/* Media query s */
+@media screen and (max-width: 700px) {
+    .col-right .right-container .recently-played .album-container .album {
+        width: calc(100% / 2);
+        margin-bottom: 1em;
+    }
+
+    .col-right .right-container .created-for-you .album-container,
+    .col-right .right-container .most-popular .album-container {
+        width: 100%;
+    }
+    
+}
+
+/* Media query xs */
 @media screen and (max-width: 600px) {
     main .col-left {
         width: var(--left-col-width-xs);
