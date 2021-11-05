@@ -11,7 +11,7 @@
     --footer-done-bar: #B0B0B0;
 
     /* width */
-    --left-col-width-md: 200px;
+    --left-col-width-md: 230px;
     --left-col-width-xs: 50px;
 
     /* height */
@@ -51,8 +51,12 @@ ul {
 }
 
 span {
-    font-size: 0.7em;
+    font-size: 0.9em;
     color: var(--grey-text);
+}
+
+.col-left span {
+    font-weight: 500;
 }
 
 body .container {
@@ -116,7 +120,7 @@ main .col-right {
     width: calc(100% - var(--left-col-width-md));
     position: relative;
     color: var(--white);
-    overflow: scroll;
+    overflow: auto;
 }
 
 /* Colonna sinistra - parte superiore */
@@ -149,7 +153,7 @@ main .col-left .left-navbar li.bordered svg {
 
 main h3 {
     color: var(--white);
-    font-size: 0.8em;
+    /* font-size: 0.9em; */
 }
 
 main .col-left .playlist h3 {
@@ -161,8 +165,7 @@ main .col-left .playlist {
 }
 
 main .col-left .playlist .create-playlist {
-    font-size: 0.8em;
-    margin: 0.5em 0;
+    margin: 0.8em 0;
 }
 
 main .col-left .playlist .plus-container {
@@ -181,7 +184,7 @@ main .col-left .playlist .plus-container i {
 
 main .col-left .playlist .name-playlist {
     height: var(--name-playlist-height);
-    overflow: scroll;
+    overflow: auto;
 }
 
 main .col-left .playlist .name-playlist li>a {
@@ -237,6 +240,7 @@ main .col-right .right-container {
 
 /* Barra fixed "effettua upgrade" */
 .col-right .upgrade {
+    z-index: 9999;
     top: 0;
     right: 0;
     height: var(--upgrade-height);
@@ -246,7 +250,7 @@ main .col-right .right-container {
 }
 
 .col-right .upgrade button {
-    margin: 1.5em 3em;
+    margin: 1em 3em;
     border-radius: 20px;
     padding: 0 3em;
     text-transform: uppercase;
@@ -254,7 +258,6 @@ main .col-right .right-container {
     color: var(--white);
     border: 1px solid var(--white);
     cursor: pointer;
-    font-size: 0.7em;
 }
 
 .col-right .upgrade button:hover {
@@ -270,6 +273,8 @@ main .col-right .right-container {
     display: inline-block;
     text-transform: uppercase;
     margin: 0 1em;
+    font-weight: 500;
+    font-size: 1.1em;
 }
 
 .col-right .right-container .navbar-ul .flex {
@@ -289,6 +294,10 @@ main .col-right .right-container {
     padding: 2em 0;
 }
 
+.col-right .right-container .section h3 {
+    font-size: 0.8em;
+}
+
 .col-right .right-container .section-title {
     margin-bottom: 1em;
 }
@@ -299,8 +308,8 @@ main .col-right .right-container {
 
 .col-right .right-container .album-container .album {
     text-align: center;
-    min-width: 145px;
-    max-width: 200px;
+    min-width: 140px;
+    max-width: 250px;
     padding-right: 1em;
 }
 
@@ -541,12 +550,29 @@ footer .footer-col-right .volume-bar:hover .progress-dot {
     display: inline-block;
 }
 
-/* 
+
 @media screen and (max-width: 1100px) {
-    .col-right .right-container .album-container {
+    .col-right .right-container .recently-played .album-container {
         flex-wrap: wrap;
+        justify-content: flex-start;
     }
-} */
+
+    .col-right .right-container .album-container .album {
+        text-align: center;
+        min-width: 140px;
+        max-width: 250px;
+        padding-right: 1em;
+    }
+
+    .col-right .right-container .recently-played .album-container .album {
+        width: calc(100% / 4);
+        margin-bottom: 1em;
+    }
+    .col-right .right-container .created-for-you .album-container,
+    .col-right .right-container .most-popular .album-container {
+        width: calc(100% / 2);
+    }
+}
 
 /* Media query */
 @media screen and (max-width: 600px) {
