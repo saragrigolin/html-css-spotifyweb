@@ -299,8 +299,8 @@ main .col-right .right-container {
 
 .col-right .right-container .album-container .album {
     text-align: center;
-    min-width: 100px;
-    max-width: 250px;
+    min-width: 145px;
+    max-width: 200px;
     padding-right: 1em;
 }
 
@@ -540,6 +540,13 @@ footer .footer-col-right .volume-bar:hover .volume-done {
 footer .footer-col-right .volume-bar:hover .progress-dot {
     display: inline-block;
 }
+
+/* 
+@media screen and (max-width: 1100px) {
+    .col-right .right-container .album-container {
+        flex-wrap: wrap;
+    }
+} */
 
 /* Media query */
 @media screen and (max-width: 600px) {
