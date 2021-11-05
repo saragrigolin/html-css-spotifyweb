@@ -13,6 +13,7 @@
     /* width */
     --left-col-width-md: 230px;
     --left-col-width-xs: 50px;
+    --footer-little-col: 200px;
 
     /* height */
     --footer-height: 70px;
@@ -35,7 +36,6 @@ html {
 body {
     width: 100%;
     height: 100vh;
-    min-width: 450px;
 }
 
 a {
@@ -387,11 +387,11 @@ footer .footer-col-right {
 
 footer .footer-col-left,
 footer .footer-col-right {
-    width: var(--left-col-width-md);
+    width: var(--footer-little-col);
 }
 
 footer .footer-col-center {
-    width: calc(100% - (var(--left-col-width-md)*2));
+    width: calc(100% - (var(--footer-little-col)*2));
     flex-direction: column;
     padding: 0.8em 0;
 }
@@ -593,7 +593,6 @@ footer .footer-col-right .volume-bar:hover .progress-dot {
     .col-right .right-container .most-popular .album-container {
         width: 100%;
     }
-    
 }
 
 /* Media query xs */
@@ -674,6 +673,75 @@ footer .footer-col-right .volume-bar:hover .progress-dot {
     }
 
     main .col-left .upper-col-left .playlist {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    footer .footer-col-left,
+    footer .footer-col-right {
+        width: 150px;
+}
+
+    footer .footer-col-center {
+        width: calc(100% - (150px*2));
+        flex-direction: column;
+        padding: 0.8em 0;
+    }
+
+    footer .footer-col-left .footer-right-content {
+        display: none;
+    }
+
+    footer .footer-col-right>i {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 470px) {
+    footer .footer-col-left,
+    footer .footer-col-right {
+        width: 60px;    
+    }
+
+    footer .footer-col-left {
+        justify-content: flex-start;
+    }
+
+    footer .footer-col-center {
+        width: calc(100% - (60px*2));
+        flex-direction: column;
+        padding: 0.8em 0;
+    }
+
+    footer .footer-col-left .footer-left-content {
+        margin: 0;
+    }
+
+    footer .footer-col-left img {
+        padding: 0 0.5em;
+    }
+
+    footer .footer-col-left .song-title {
+        display: none;
+    }
+
+    footer .footer-col-left .footer-right-content {
+        display: none;
+    }
+
+    footer .footer-col-right>i {
+        display: none;
+    }
+
+    footer .footer-col-right .volume-done,
+    footer .footer-col-right .volume-left {
+        display: none;
+    }
+}
+
+@media screen and (max-height: 140px) {
+    .col-right .upgrade {
         display: none;
     }
 }
