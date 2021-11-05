@@ -13,6 +13,7 @@
     /* width */
     --left-col-width-md: 230px;
     --left-col-width-xs: 50px;
+    --footer-little-col: 200px;
 
     /* height */
     --footer-height: 70px;
@@ -387,11 +388,11 @@ footer .footer-col-right {
 
 footer .footer-col-left,
 footer .footer-col-right {
-    width: var(--left-col-width-md);
+    width: var(--footer-little-col);
 }
 
 footer .footer-col-center {
-    width: calc(100% - (var(--left-col-width-md)*2));
+    width: calc(100% - (var(--footer-little-col)*2));
     flex-direction: column;
     padding: 0.8em 0;
 }
